@@ -20,7 +20,7 @@ public class TesteBuscaConta {
 		em.getTransaction().commit();
 		em.close();
 		
-/*************************************************************************/
+/************************************************************************/
 		
 		
 		EntityManager em2 = new JPAUtil().getEntityManager();
@@ -31,6 +31,17 @@ public class TesteBuscaConta {
 		em2.merge(conta);
 		em2.getTransaction().commit();
 		em2.close();
+/************************************************************************/
+		EntityManager em3 = new JPAUtil().getEntityManager();
+		em3.getTransaction().begin();
+		
+		conta = em3.find(Conta.class, 2);
+		em3.remove(conta);
+		
+		em3.getTransaction().commit();
+		em3.close();
+		
+
 	}
 
 }
