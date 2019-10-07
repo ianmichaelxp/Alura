@@ -1,8 +1,8 @@
-package br.alura.com.financas.Util;
+package br.alura.com.financas.modelo;
 
 import javax.persistence.EntityManager;
 
-import br.alura.com.financas.modelo.Conta;
+import br.alura.com.financas.Util.JPAUtil;
 
 public class PopulaConta {
 
