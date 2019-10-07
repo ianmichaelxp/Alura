@@ -6,7 +6,7 @@ import java.util.Calendar;
 import javax.persistence.EntityManager;
 
 import br.alura.com.financas.Util.JPAUtil;
-import br.com.caelum.financas.modelo.Conta;
+import br.alura.com.financas.modelo.Conta;
 import br.com.caelum.financas.modelo.Movimentacao;
 import br.com.caelum.financas.modelo.TipoMovimentacao;
 
