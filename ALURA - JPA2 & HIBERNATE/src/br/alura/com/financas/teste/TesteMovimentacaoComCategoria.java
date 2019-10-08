@@ -47,7 +47,7 @@ public class TesteMovimentacaoComCategoria {
 //		
 //		em.persist(movimentacao1);
 //		em.persist(movimentacao2);
-		Movimentacao movimentacao = em.find(Movimentacao.class, 1);
+		Movimentacao movimentacao = em.find(Movimentacao.class, 5);
 		movimentacao.setDescricao("Viagem a PE");
 
 		em.getTransaction().commit();
