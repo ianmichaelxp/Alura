@@ -42,11 +42,13 @@ public class TesteMovimentacaoComCategoria {
 		EntityManager em = new JPAUtil().getEntityManager();
 				
 		em.getTransaction().begin();
-		em.persist(categoria1);
-		em.persist(categoria2);
-		
-		em.persist(movimentacao1);
-		em.persist(movimentacao2);
+//		em.persist(categoria1);
+//		em.persist(categoria2);
+//		
+//		em.persist(movimentacao1);
+//		em.persist(movimentacao2);
+		Movimentacao movimentacao = em.find(Movimentacao.class, 1);
+		movimentacao.setDescricao("Viagem a PE");
 
 		em.getTransaction().commit();
 		em.close();
