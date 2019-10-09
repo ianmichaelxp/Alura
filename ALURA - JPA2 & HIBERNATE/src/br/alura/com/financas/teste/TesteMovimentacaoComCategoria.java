@@ -15,8 +15,8 @@ import br.alura.com.financas.modelo.TipoMovimentacao;
 public class TesteMovimentacaoComCategoria {
 
 	public static void main(String[] args) {
-		Categoria categoria1 = new Categoria("Viagem");
-		Categoria categoria2 = new Categoria("Almoco");
+		Categoria categoria1 = new Categoria("Categoria1");
+		Categoria categoria2 = new Categoria("Categoria2");
 		
 		Conta conta = new Conta();
 		conta.setId(1);
@@ -42,13 +42,13 @@ public class TesteMovimentacaoComCategoria {
 		EntityManager em = new JPAUtil().getEntityManager();
 				
 		em.getTransaction().begin();
-//		em.persist(categoria1);
-//		em.persist(categoria2);
-//		
-//		em.persist(movimentacao1);
-//		em.persist(movimentacao2);
-		Movimentacao movimentacao = em.find(Movimentacao.class, 5);
-		movimentacao.setDescricao("Viagem a PE");
+		em.persist(categoria1);
+		em.persist(categoria2);
+		
+		em.persist(movimentacao1);
+		em.persist(movimentacao2);
+//		Movimentacao movimentacao = em.find(Movimentacao.class, 5);
+//		movimentacao.setDescricao("Viagem a PE");
 
 		em.getTransaction().commit();
 		em.close();

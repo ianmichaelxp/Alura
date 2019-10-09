@@ -12,8 +12,7 @@ public class TesteConta {
 		conta.setBanco("bb");
 		conta.setTitular("Ian Michael");
 		conta.setNumero("0");
-
-		
+				
 		EntityManager em = new JPAUtil().getEntityManager();
 		
 		em.getTransaction().begin();

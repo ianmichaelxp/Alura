@@ -12,6 +12,7 @@ public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	private String nome;
 	private String profissao;
 	private String endereco;
@@ -49,5 +50,4 @@ public class Cliente {
 		this.conta = conta;
 	}
 	
-
 }
