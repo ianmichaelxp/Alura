@@ -8,6 +8,10 @@ import javax.persistence.Id;
 @Entity
 public class Categoria {
 	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	@Deprecated
 	public Categoria() {
 		super();
