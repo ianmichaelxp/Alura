@@ -33,7 +33,7 @@ public class TesteFuncoesJPQL {
 //		query.setParameter("pConta", conta);
 //		query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 		
-		String jpql = "select max(mov.valor) from Movimentacao mov where mov.conta = :pConta" + 
+		String jpql = "select count(mov) from Movimentacao mov where mov.conta = :pConta" + 
 		" and mov.tipo = :pTipo" +
 		" order by mov.valor desc";
 		Query query = em.createQuery(jpql);
@@ -41,9 +41,9 @@ public class TesteFuncoesJPQL {
 		query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 		
 		
-		BigDecimal max = (BigDecimal) query.getSingleResult();
+		Long cont = (Long) query.getSingleResult();
 		
-		System.out.println("max: "+max);
+		System.out.println("QTD: "+cont);
 		
 		
 		em.getTransaction().commit();
