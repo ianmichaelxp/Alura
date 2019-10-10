@@ -14,7 +14,7 @@ public class TesteTodasMovimentacoes {
 		EntityManager em = new JPAUtil().getEntityManager();
 		em.getTransaction().begin();
 		
-		String jpql = "select c from Conta c";
+		String jpql = "select c from Conta c join fetch c.movimentacoes";
 		Query query = em.createQuery(jpql);
 		
 		List<Conta> tdsContas = query.getResultList();
